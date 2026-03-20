@@ -3,20 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Idle Knight</title>
+    <title>Idle Knight: RPG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div class="game-shell">
       <div class="floating-ui">
-        <button id="inventoryBtn" class="soft">Inventario</button>
-        <button id="shopBtn" class="soft">Tienda</button>
-        <button id="pauseBtn" class="ghost">Pausa</button>
+        <button id="inventoryBtn" class="glass-btn primary">🎒 Inventario</button>
+        <button id="shopBtn" class="glass-btn">🛒 Tienda</button>
+        <button id="pauseBtn" class="glass-btn danger">⏸ Pausa</button>
       </div>
 
-      <aside class="equipment-panel">
-        <p class="panel-kicker">CABALLERO</p>
-        <h2>Equipo</h2>
+      <aside class="equipment-panel glass-panel">
+        <p class="panel-kicker">Tu Héroe</p>
+        <h2>Caballero</h2>
         <div class="equipment-grid" id="equipGrid"></div>
       </aside>
 
@@ -27,41 +28,44 @@
           <div class="parallax mid-layer"></div>
           <div class="parallax near-layer"></div>
           <div class="ground-layer"></div>
+          
           <div class="entities-layer" id="entitiesLayer"></div>
           <div class="pickup-layer" id="pickupLayer"></div>
           <div class="popup-layer" id="popupLayer"></div>
           <div class="bubble-layer" id="bubbleLayer"></div>
-          <div class="toast toast-item" id="itemToast"></div>
+          
+          <div class="toast toast-item glass-panel" id="itemToast"></div>
           <div class="toast toast-level" id="levelToast"></div>
+          
           <div class="corner-badges">
-            <div class="badge" id="levelBadge">Lv 1</div>
-            <div class="badge gold" id="goldBadge">0 oro</div>
-            <div class="badge" id="biomeBadge">Bosque</div>
+            <div class="badge glass-badge" id="levelBadge">Lv 1</div>
+            <div class="badge gold glass-badge" id="goldBadge">0 oro</div>
+            <div class="badge glass-badge" id="biomeBadge">Bosque</div>
           </div>
         </div>
       </main>
     </div>
 
     <div class="overlay" id="inventoryModal">
-      <div class="modal">
+      <div class="modal glass-panel">
         <div class="modal-head">
           <div>
             <p class="panel-kicker">BOTÍN</p>
             <h2>Inventario</h2>
           </div>
-          <button id="closeInventoryBtn" class="ghost">Cerrar</button>
+          <button id="closeInventoryBtn" class="glass-btn danger">Cerrar ✖</button>
         </div>
         <div class="modal-grid">
           <section class="inventory-grid" id="inventoryGrid"></section>
           <aside>
-            <div class="detail-card" id="itemDetail">
+            <div class="detail-card glass-card" id="itemDetail">
               <h3>Nada seleccionado</h3>
               <p>Elige un objeto para equiparlo o venderlo.</p>
             </div>
-            <div class="detail-actions">
-              <button id="equipBtn">Equipar</button>
-              <button id="sellBtn" class="soft">Vender</button>
-              <button id="unequipBtn" class="soft">Quitar</button>
+            <div class="detail-actions mt-3">
+              <button id="equipBtn" class="glass-btn primary">Equipar</button>
+              <button id="sellBtn" class="glass-btn gold">Vender</button>
+              <button id="unequipBtn" class="glass-btn">Quitar</button>
             </div>
           </aside>
         </div>
@@ -69,16 +73,16 @@
     </div>
 
     <div class="overlay" id="shopModal">
-      <div class="modal">
+      <div class="modal glass-panel">
         <div class="modal-head">
           <div>
             <p class="panel-kicker">MERCADER</p>
             <h2>Tienda</h2>
           </div>
           <div class="actions">
-            <button id="buyMysteryBtn">Objeto aleatorio</button>
-            <button id="refreshShopBtn" class="soft">Refrescar</button>
-            <button id="closeShopBtn" class="ghost">Cerrar</button>
+            <button id="buyMysteryBtn" class="glass-btn primary">🎲 Objeto Misterioso</button>
+            <button id="refreshShopBtn" class="glass-btn">🔄 Refrescar</button>
+            <button id="closeShopBtn" class="glass-btn danger">Cerrar ✖</button>
           </div>
         </div>
         <div class="shop-grid" id="shopGrid"></div>
