@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Idle Knight</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <div class="floating-ui">
+        <button id="inventoryBtn" class="soft">Inventario</button>
+        <button id="shopBtn" class="soft">Tienda</button>
+        <button id="pauseBtn" class="ghost">Pausa</button>
+      </div>
+
+      <aside class="equipment-panel">
+        <p class="panel-kicker">CABALLERO</p>
+        <h2>Equipo</h2>
+        <div class="equipment-grid" id="equipGrid"></div>
+      </aside>
+
+      <main class="stage-frame">
+        <div class="stage biome-forest" id="stage">
+          <div class="sky-layer"></div>
+          <div class="parallax far-layer"></div>
+          <div class="parallax mid-layer"></div>
+          <div class="parallax near-layer"></div>
+          <div class="ground-layer"></div>
+          <div class="entities-layer" id="entitiesLayer"></div>
+          <div class="pickup-layer" id="pickupLayer"></div>
+          <div class="popup-layer" id="popupLayer"></div>
+          <div class="bubble-layer" id="bubbleLayer"></div>
+          <div class="toast toast-item" id="itemToast"></div>
+          <div class="toast toast-level" id="levelToast"></div>
+          <div class="corner-badges">
+            <div class="badge" id="levelBadge">Lv 1</div>
+            <div class="badge gold" id="goldBadge">0 oro</div>
+            <div class="badge" id="biomeBadge">Bosque</div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="overlay" id="inventoryModal">
+      <div class="modal">
+        <div class="modal-head">
+          <div>
+            <p class="panel-kicker">BOTÍN</p>
+            <h2>Inventario</h2>
+          </div>
+          <button id="closeInventoryBtn" class="ghost">Cerrar</button>
+        </div>
+        <div class="modal-grid">
+          <section class="inventory-grid" id="inventoryGrid"></section>
+          <aside>
+            <div class="detail-card" id="itemDetail">
+              <h3>Nada seleccionado</h3>
+              <p>Elige un objeto para equiparlo o venderlo.</p>
+            </div>
+            <div class="detail-actions">
+              <button id="equipBtn">Equipar</button>
+              <button id="sellBtn" class="soft">Vender</button>
+              <button id="unequipBtn" class="soft">Quitar</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay" id="shopModal">
+      <div class="modal">
+        <div class="modal-head">
+          <div>
+            <p class="panel-kicker">MERCADER</p>
+            <h2>Tienda</h2>
+          </div>
+          <div class="actions">
+            <button id="buyMysteryBtn">Objeto aleatorio</button>
+            <button id="refreshShopBtn" class="soft">Refrescar</button>
+            <button id="closeShopBtn" class="ghost">Cerrar</button>
+          </div>
+        </div>
+        <div class="shop-grid" id="shopGrid"></div>
+      </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
