@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Idle Knight: RPG</title>
+    <title>Idle Knight: Cartoon RPG</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
   </head>
@@ -22,7 +22,7 @@
       </aside>
 
       <main class="stage-frame">
-        <div class="stage biome-forest" id="stage">
+        <div class="stage" id="stage">
           <div class="sky-layer"></div>
           <div class="parallax far-layer"></div>
           <div class="parallax mid-layer"></div>
@@ -35,12 +35,11 @@
           <div class="bubble-layer" id="bubbleLayer"></div>
           
           <div class="toast toast-item glass-panel" id="itemToast"></div>
-          <div class="toast toast-level" id="levelToast"></div>
           
           <div class="corner-badges">
             <div class="badge glass-badge" id="levelBadge">Lv 1</div>
             <div class="badge gold glass-badge" id="goldBadge">0 oro</div>
-            <div class="badge glass-badge" id="biomeBadge">Bosque</div>
+            <div class="badge glass-badge" id="biomeBadge">Cargando...</div>
           </div>
         </div>
       </main>
@@ -80,8 +79,7 @@
             <h2>Tienda</h2>
           </div>
           <div class="actions">
-            <button id="buyMysteryBtn" class="glass-btn primary">🎲 Objeto Misterioso</button>
-            <button id="refreshShopBtn" class="glass-btn">🔄 Refrescar</button>
+            <button id="buyMysteryBtn" class="glass-btn primary">🎲 Objeto Misterioso (1000g)</button>
             <button id="closeShopBtn" class="glass-btn danger">Cerrar ✖</button>
           </div>
         </div>
